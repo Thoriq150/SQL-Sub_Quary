@@ -2,11 +2,11 @@
 
 #### Latihan
 
-#### • Tampilkan data karyawan yang bekerja pada departemen yang sama dengan karyawan yang bernama Dika
-#### • Tampilkan data karyawan yang gajinya lebih besar dari rata-rata gaji semua karyawan. urutkan menurun berdasarkan besaran gaji
-#### • Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di department yang sama dengan karyawan dengan nama yang mengandung huruf 'K'.
-#### • Tampilkan data karyawan yang bekerja pada departemen yang ada dikantor pusat.
-#### • Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di department yang sama dengan karyawan dengan nama yang mengandung huruf 'K' dan yang gajinya lebih besar dari rata-rata gaji semua karyawan
+#### 1• Tampilkan data karyawan yang bekerja pada departemen yang sama dengan karyawan yang bernama Dika
+#### 2• Tampilkan data karyawan yang gajinya lebih besar dari rata-rata gaji semua karyawan. urutkan menurun berdasarkan besaran gaji
+#### 3• Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di department yang sama dengan karyawan dengan nama yang mengandung huruf 'K'.
+#### 4• Tampilkan data karyawan yang bekerja pada departemen yang ada dikantor pusat.
+#### 5• Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di department yang sama dengan karyawan dengan nama yang mengandung huruf 'K' dan yang gajinya lebih besar dari rata-rata gaji semua karyawan
 
 #### Hasil Query
 #### 1.![Sub1](https://github.com/Thoriq150/SQL-Sub_Quary/assets/115950790/a2c6b7b0-e4ca-475a-bffe-c08ce5b2f204)
