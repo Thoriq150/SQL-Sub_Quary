@@ -1,15 +1,33 @@
-# Sub Querry
-#### Latihan
+-- Menampilkan data karyawan dengan departemen yang sama dengan dika 
+SELECT *
+FROM karyawan
+WHERE id_dpt IN (SELECT id_dpt FROM karyawan WHERE nama = 'Dika');
 
-• Tampilkan data karyawan yang bekerja pada departemen yang sama
-dengan karyawan yang bernama Dika
-• Tampilkan data karyawan yang gajinya lebih besar dari rata-rata gaji semua
-karyawan. urutkan menurun berdasarkan besaran gaji
-• Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di
-department yang sama dengan karyawan dengan nama yang mengandung
-huruf 'K'.
-• Tampilkan data karyawan yang bekerja pada departemen yang ada di
-kantor pusat.
-• Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di
-department yang sama dengan karyawan dengan nama yang mengandung
-huruf 'K' dan yang gajinya lebih besar dari rata-rata gaji semua karyawan
+-- Menampilkan data karyawan yang gajinya lebih besar dari rata rata
+
+SELECT *
+FROM karyawan
+WHERE gaji_pokok > (SELECT AVG(gaji_pokok) FROM karyawan)
+ORDER BY gaji_pokok DESC;
+
+-- menampilkan nik dan nama karyawan yang berkerja dengan departemen yang sama dengan karyawan yang memiliki huruf  K
+
+SELECT nik, nama
+FROM karyawan
+WHERE id_dpt IN (SELECT id_dpt FROM karyawan WHERE nama LIKE '%K%');
+
+--Tampilkan data karyawan yang bekerja pada departemen yang ada di kantor pusat
+
+SELECT k.nik,k.nama as 'nama karyawan',d.nama as 'departemen',p.nama as 'perusahaan'
+FROM karyawan k
+JOIN departemen d ON k.id_dpt = d.id_dpt
+JOIN perusahaan p ON d.id_p = p.id_p
+WHERE p.nama = 'Kantor Pusat';
+
+-- Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di departemen 
+-- yang sama dengan karyawan dengan nama yang mengandung huruf 'K' dan gajinya lebih besar dari rata-rata gaji semua karyawan.
+
+SELECT k.nik, k.nama
+FROM karyawan k
+WHERE k.id_dpt IN (SELECT id_dpt FROM karyawan WHERE nama LIKE '%K%')
+  AND k.gaji_pokok > (SELECT AVG(gaji_pokok) FROM karyawan);
